@@ -1,0 +1,18 @@
+CREATE TABLE Clothing_Store (id INTEGER, name TEXT, price INTEGER, Quantity INTEGER, Category TEXT);
+
+INSERT INTO Clothing_Store VALUES
+(1,'Wacky socks', 4.50, 5, 'socks'), (2, 'Short sleeve shirt', 10, 15, 'shirts'), (3, 'Sparkle pants', 15.50, 15, 'pants'), (4, 'Red shirt', 5.50, 12, 'shirts'), (5, 'Rain jacket', 25, 31, 'jackets'), (6, 'Pink socks', 4.50, 11, 'socks'), (7, 'Jeans', 17.50, 12, 'pants'), (8, 'Stripe socks', 4.50, 14, 'socks'), (9, 'Dress shirt', 18.50, 25, 'shirts'), (10, 'Long jacket', 22, 16, 'jackets'), (11, 'White short', 14.50, 10, 'pants'), (12, 'Diamond necklace', 55.00, 10, 'jewelry'), (13, 'Fuzzy earrings', 13.50, 15, 'jewelry'), (14, 'Wood bead bracelet', 12, 20, 'jewelry'), (15, 'Frilly socks', 4.50, 15, 'socks'), (16, 'Stud earrings', 9.50, 15, 'jewelry'), (17, 'Smiley T-shirt', 10, 12, 'shirts'); 
+
+/*store inventory*/
+
+SELECT * FROM Clothing_Store 
+ORDER BY price; 
+
+/*most expensive item in store*/ 
+SELECT id, name, MAX(price) AS Expensive FROM Clothing_Store;
+
+/*list of most expensive items in the store*/
+
+SELECT id,name, price, quantity, category FROM Clothing_Store
+WHERE price >10 ORDER BY price DESC;
+
